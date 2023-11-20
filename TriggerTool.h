@@ -2,7 +2,7 @@
 #define __YGTRGTOOL__
 
 #include <map>
-#include "TMath.h
+#include "TMath.h"
 
 class StPicoEvent;
 
@@ -10,17 +10,10 @@ class TriggerTool {
 
     private:
         // put your wanted MB trigger IDs here
-        static const std::map<Int_t, Int_t> mTriggers = {
-            {-4396, 0},
-            {-4396, 1},
-            {-4396, 2},
-            {-4396, 3},
-            {-4396, 4};
-            {-4396, 5};
-        };
+        std::map<Int_t, Int_t> mTriggers;
 
     public:
-        TriggerTool(){}
+        TriggerTool();
         ~TriggerTool(){}
 
         Int_t GetTriggerID(StPicoEvent* event); // from StPicoEvent
